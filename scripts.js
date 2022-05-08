@@ -5,7 +5,7 @@ var apiKey = "bb2e404c73214cf0940459d839ad00b5";
 var showWorldNews = function () {
   var userInput = document.querySelector("#world-news-input-section").value;
   fetch(
-    `https://newsapi.org/v2/everything?q=${userInput}&sortBy=publishedAt&apiKey=${apiKey}`
+    `https://cors-anywhere.herokuapp.com/https://newsapi.org/v2/everything?q=${userInput}&sortBy=publishedAt&apiKey=${apiKey}`
   )
     .then(function (res) {
       return res.json();
